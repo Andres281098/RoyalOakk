@@ -1,0 +1,629 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* HTML */
+html {
+    overflow-x: hidden;
+}
+
+:root {
+    /* Paleta de Colores */
+    --bordo: #501F3A;
+    --rosa: #CB2D6F;
+    --blanco: #CCCCCC;
+    --verdeClaro: #12A098;
+    --verdeOscuro: #0F292F;
+
+    /* Fuente Titulos y Contenido */
+    --fuenteTitulo: 'Potta One', cursive;
+    --fuenteContenido: 'Kdam Thmor Pro', sans-serif;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+
+/* Body */
+body {
+    background-color: var(--verdeOscuro);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='600' y1='25' x2='600' y2='777'%3E%3Cstop offset='0' stop-color='%230F292F'/%3E%3Cstop offset='1' stop-color='%23501F3A'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='650' y1='25' x2='650' y2='777'%3E%3Cstop offset='0' stop-color='%230d2a34'/%3E%3Cstop offset='1' stop-color='%235a2140'/%3E%3C/linearGradient%3E%3ClinearGradient id='c' gradientUnits='userSpaceOnUse' x1='700' y1='25' x2='700' y2='777'%3E%3Cstop offset='0' stop-color='%230c2b38'/%3E%3Cstop offset='1' stop-color='%23652345'/%3E%3C/linearGradient%3E%3ClinearGradient id='d' gradientUnits='userSpaceOnUse' x1='750' y1='25' x2='750' y2='777'%3E%3Cstop offset='0' stop-color='%230f2b3d'/%3E%3Cstop offset='1' stop-color='%236f254b'/%3E%3C/linearGradient%3E%3ClinearGradient id='e' gradientUnits='userSpaceOnUse' x1='800' y1='25' x2='800' y2='777'%3E%3Cstop offset='0' stop-color='%23142b41'/%3E%3Cstop offset='1' stop-color='%237a2650'/%3E%3C/linearGradient%3E%3ClinearGradient id='f' gradientUnits='userSpaceOnUse' x1='850' y1='25' x2='850' y2='777'%3E%3Cstop offset='0' stop-color='%231c2a44'/%3E%3Cstop offset='1' stop-color='%23852855'/%3E%3C/linearGradient%3E%3ClinearGradient id='g' gradientUnits='userSpaceOnUse' x1='900' y1='25' x2='900' y2='777'%3E%3Cstop offset='0' stop-color='%23252946'/%3E%3Cstop offset='1' stop-color='%2390295a'/%3E%3C/linearGradient%3E%3ClinearGradient id='h' gradientUnits='userSpaceOnUse' x1='950' y1='25' x2='950' y2='777'%3E%3Cstop offset='0' stop-color='%232e2846'/%3E%3Cstop offset='1' stop-color='%239c2a5e'/%3E%3C/linearGradient%3E%3ClinearGradient id='i' gradientUnits='userSpaceOnUse' x1='1000' y1='25' x2='1000' y2='777'%3E%3Cstop offset='0' stop-color='%23372646'/%3E%3Cstop offset='1' stop-color='%23a72b63'/%3E%3C/linearGradient%3E%3ClinearGradient id='j' gradientUnits='userSpaceOnUse' x1='1050' y1='25' x2='1050' y2='777'%3E%3Cstop offset='0' stop-color='%23402443'/%3E%3Cstop offset='1' stop-color='%23b32c67'/%3E%3C/linearGradient%3E%3ClinearGradient id='k' gradientUnits='userSpaceOnUse' x1='1100' y1='25' x2='1100' y2='777'%3E%3Cstop offset='0' stop-color='%2349213f'/%3E%3Cstop offset='1' stop-color='%23bf2c6b'/%3E%3C/linearGradient%3E%3ClinearGradient id='l' gradientUnits='userSpaceOnUse' x1='1150' y1='25' x2='1150' y2='777'%3E%3Cstop offset='0' stop-color='%23501F3A'/%3E%3Cstop offset='1' stop-color='%23CB2D6F'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill-opacity='0.12'%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' x='100' width='1100' height='800'/%3E%3Crect fill='url(%23c)' x='200' width='1000' height='800'/%3E%3Crect fill='url(%23d)' x='300' width='900' height='800'/%3E%3Crect fill='url(%23e)' x='400' width='800' height='800'/%3E%3Crect fill='url(%23f)' x='500' width='700' height='800'/%3E%3Crect fill='url(%23g)' x='600' width='600' height='800'/%3E%3Crect fill='url(%23h)' x='700' width='500' height='800'/%3E%3Crect fill='url(%23i)' x='800' width='400' height='800'/%3E%3Crect fill='url(%23j)' x='900' width='300' height='800'/%3E%3Crect fill='url(%23k)' x='1000' width='200' height='800'/%3E%3Crect fill='url(%23l)' x='1100' width='100' height='800'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: var(--fuenteContenido);
+    color: var(--blanco);
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav {
+    background-color: var(--blanco);
+    width: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    height: 100%;
+}
+
+.nav div {
+    padding: 0.5rem;
+    width: 4rem;
+    transition-duration: 0.5s;
+    margin-bottom: 0.3rem;
+}
+
+
+.nav div:hover {
+    width: 4.2rem;
+    transition-duration: 0.5s;
+
+}
+
+
+#marca {
+    width: auto;
+}
+
+.center {
+    width: 100%;
+    /* REVISAR */
+}
+
+
+.scale-up-center {
+    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes scale-up-center {
+    0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes scale-up-center {
+    0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+img {
+    width: 92%;
+    margin-left: 8%
+}
+
+
+.center img {
+    background-size: cover;
+    height: 100vh;
+}
+
+p {
+    text-align: center;
+    color: black;
+}
+
+
+.section-products p {
+    color: var(--blanco);
+}
+
+.section-products {
+    width: 92%;
+    margin-left: 8%;
+    padding-bottom: 0;
+}
+
+#pizzas {
+    width: 92%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--blanco);
+    margin-left: 8%;
+}
+
+#pizzas img {
+    padding: 0.5rem;
+    margin-left: 3%;
+    width: 5rem;
+}
+
+#pizzas div:hover {
+    size: 10px;
+}
+
+.contenedorDeVariedades {
+    justify-content: space-around;
+    width: 92%;
+    margin-left: 8%;
+    /* background-color: var(--verdeOscuro); */
+    color: var(--blanco);
+    text-align: center;
+    padding-top: 1rem;
+    padding-right: 1rem;
+}
+
+.contenedorBotones {
+    background-color: black;
+}
+
+.modal-backdrop {
+    position: relative
+}
+
+
+/* SECCION PRODUCTOS */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap'); */
+
+/* body {
+    font-family: "Poppins", sans-serif;
+    color: var(--blanco);
+} */
+
+a,
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.section-products {
+    padding: 25px 0 54px;
+}
+
+.section-products .header {
+    margin-bottom: 50px;
+    background-color: var(--verdeClaro);
+    width: 100%;
+}
+
+.section-products .header h3 {
+    font-size: 1rem;
+    color: var(--blanco);
+    font-weight: 500;
+}
+
+.section-products .header h2 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: var(--blanco);
+    background-color: var(--verdeClaro);
+    border-radius: 5px;
+}
+
+.single-product h3 {
+    text-align: start;
+}
+
+.section-products .single-product {
+    margin-bottom: 26px;
+}
+
+.section-products .single-product .part-1 {
+    position: relative;
+    height: 290px;
+    max-height: 290px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.section-products .single-product .part-1::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: all 0.3s;
+}
+
+.section-products .single-product:hover .part-1::before {
+    transform: scale(1.2, 1.2) rotate(5deg);
+}
+
+.section-products #product-1 .part-1::before {
+    background: url("https://www.lavoz.com.ar/resizer/JkTjWJu6dTBQ2k0LJiAbKSdlfIs=/1023x682/smart/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/A5L4SSFSFJCVHFYFMDWBLH72ZY.png") no-repeat center;
+    background-size: cover;
+    transition: all 0.3s;
+}
+
+.section-products #product-2 .part-1::before {
+    background: url("https://images.rappi.com.ar/products/287038-1540490885.png") no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-3 .part-1::before {
+    background: url("https://cdn.lavoz.com.ar/sites/default/files/styles/landscape_565_318/public/nota_periodistica/NOTHOPPI2_1601916843.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-4 .part-1::before {
+    background: url("https://static.wixstatic.com/media/fc266a_95b3c98dd25449fd952dfceb7eac91ed~mv2.jpg/v1/fill/w_321,h_401,al_c,q_90/fc266a_95b3c98dd25449fd952dfceb7eac91ed~mv2.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-5 .part-1::before {
+    background: url("https://sommelier.com.pe/wp-content/uploads/photo-1572802419224-296b0aeee0d9.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-6 .part-1::before {
+    background: url("https://s1.1zoom.me/big0/951/Fast_food_Hamburger_Buns_French_fries_Vegetables_566270_1280x853.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-7 .part-1::before {
+    background: url("https://media.istockphoto.com/photos/favourite-burger-toppings-picture-id469660542?k=20&m=469660542&s=612x612&w=0&h=1LfG2K-CgB78QgcXJllD8riD3WyPLFUfR0tfihlEmhw=") no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-8 .part-1::before {
+    background: url("https://i.pinimg.com/736x/c4/d8/97/c4d897a5e56d2a906522029f1334b7d9.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-9 .part-1::before {
+    background: url("https://images.unsplash.com/photo-1592892111425-15e04305f961?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGNvY2ElMjBjb2xhfGVufDB8fDB8fA%3D%3D&w=1000&q=80") no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-10 .part-1::before {
+    background: url("https://c0.wallpaperflare.com/preview/398/729/224/alcohol-alcoholic-beverage-beer-beer-bottle.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-11 .part-1::before {
+    background: url("https://r1.ilikewallpaper.net/iphone-wallpapers/download-133454/sprite.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-12 .part-1::before {
+    background: url("https://babycocina.com/wp-content/uploads/2020/09/limonada-sin-azucar.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.section-products .single-product .part-1 .discount,
+.section-products .single-product .part-1 .new {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: #ffffff;
+    background-color: #fe302f;
+    padding: 2px 8px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.section-products .single-product .part-1 .new {
+    left: 0;
+    background-color: #444444;
+}
+
+.section-products .single-product .part-1 ul {
+    position: absolute;
+    bottom: -41px;
+    left: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    opacity: 0;
+    transition: bottom 0.5s, opacity 0.5s;
+}
+
+.section-products .single-product:hover .part-1 ul {
+    bottom: 30px;
+    opacity: 1;
+}
+
+.section-products .single-product .part-1 ul li {
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.section-products .single-product .part-1 ul li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #ffffff;
+    color: #444444;
+    text-align: center;
+    box-shadow: 0 2px 20px rgb(50 50 50 / 10%);
+    transition: color 0.2s;
+}
+
+.section-products .single-product .part-1 ul li a:hover {
+    color: #fe302f;
+}
+
+.section-products .single-product .part-2 .product-title {
+    font-size: 1rem;
+}
+
+.section-products .single-product .part-2 h4 {
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.section-products .single-product .part-2 .product-old-price {
+    position: relative;
+    padding: 0 7px;
+    margin-right: 2px;
+    opacity: 0.6;
+}
+
+.section-products .single-product .part-2 .product-old-price::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #444444;
+    transform: translateY(-50%);
+}
+
+/* DIVISORES */
+.divisor {
+    width: 88%;
+    height: 10%;
+    margin-left: 10%;
+    padding-top: 1rem;
+    border-radius: 10px;
+    padding-bottom: 1%;
+}
+
+.tipoDeComida {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: var(--blanco);
+    font-family: var(--fuenteTitulo);
+    /* border-right: 1px solid var(--blanco); */
+    padding-right: 1%;
+
+}
+
+.tipoDeComida img {
+    width: auto;
+    height: 15vh;
+    margin: 0;
+}
+
+.tipoDeComida h3 {
+    width: min-content;
+    height: min-content;
+    margin-bottom: 0;
+    font-weight: 100;
+    color: var(--blanco);
+    background-color: var(--verdeClaro);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--fuenteContenido);
+}
+
+#divisorBurgers {
+    width: 100%;
+    height: 15vh;
+    background-image: url(https://us.123rf.com/450wm/kbolbik/kbolbik2010/kbolbik201000595/157596716-patr%C3%B3n-transparente-de-vector-de-hamburguesas-de-contorno-negro-fondo-para-banner-embalaje-men%C3%BA-.jpg?ver=6);
+    background-size: auto;
+}
+
+#divisorBurgers2 {
+    width: 100%;
+    height: 15vh;
+    background-image: url();
+    background-size: auto;
+}
+
+#divisorBurgers img {
+    width: 100%;
+    height: 100%;
+}
+
+#divisorBurgers div {
+    width: 10%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* VIDEO */
+/* Cerveza */
+#video {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15vh;
+    object-fit: cover;
+}
+
+/* Video Principal */
+#video2 {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+
+
+/* RESPONSIVE*/
+@media screen and (max-width: 1000px) {
+
+    header {
+        flex-direction: column;
+    }
+
+    .nav {
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 10vh;
+        justify-content: space-around;
+        z-index: 10;
+    }
+
+    #marca {
+        width: 4.5rem;
+        padding: 0;
+        margin-bottom: 1.5rem;
+        padding: 0.3rem;
+    }
+
+    img {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .center img {
+        height: 100%;
+    }
+
+    #pizzas {
+        width: 100%;
+        margin: 0%;
+        flex-wrap: wrap;
+    }
+
+    .nav div {
+        width: 3.5rem;
+    }
+
+    #pizzas img {
+        width: 4rem;
+        margin-left: 5%;
+    }
+
+    .section-products {
+        width: 100%;
+        margin-left: 0;
+    }
+
+}
+
+/* MENU HAMBURGUESA */
+
+/* #pushed{
+    color: var(--verdeClaro);
+    font-weight: bold;
+    background-color: var(--verdeClaro);
+    padding: 5px;
+}
+
+#hamburguesitas{
+    display: flex;
+}
+
+@media(max-width: 570px){
+    
+    header{
+        height: fit-content;
+        width: 100%;
+        background-color: var(--verdeClaro);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0;
+        gap: 15px;
+        padding: 20px 0 20px 0;
+    }
+
+.nav{
+        display: none;
+    }
+    #hamburguesa{
+        display: contents;
+        color: var(--verdeOscuro);
+    }
+    #navbarToggleExternalContent{
+        color: var(--verdeOscuro);
+        background-color: var(--verdeOscuro);
+        text-align: right;
+    }
+    #menu_hamburguesa{
+        display: contents;
+    }
+    #container_fluid{
+    height: 15vw;
+    background-color: var(--blanco);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 5vw;
+    }
+    #boton_hamburguesa{
+    background-color: var(--verdeOscuro);
+    }
+    .navbar-toggler-icon{
+    background-color: var(--verdeOscuro);
+    }
+}    */
+
+/* Estilos pagina random*/
+
+#random {
+    color: var(--verdeOscuro);
+    width: 92%;
+    margin-left: 8%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#random img {
+    width: 10%;
+    height: 30%;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+#comestible {
+    background-color: #a05712;
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#seccionAleatoria {
+    margin-left: 8%;
+
+}
+
+/* #selccionAleatoria .producto */

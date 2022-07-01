@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+  <link rel=" preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Potta+One&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/19135af981.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/perfil.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="icon" href="../media/logo-royaloak-2 (1).ico">
+
+  <title>Tu Perfil</title>
+</head>
+
+<body>
+  <div id="app">
+
+    <div id="hamburguesa">
+
+      <div class="collapse" id="navbarToggleExternalContent">
+              <div>
+                      <nav id="menu_hamburguesa" class="navbar navbar-dark">
+                              <div id="container_fluid" class="d-flex justify-between">
+                                      <div>
+                                              <img id="carritoHamburguesa" src="../media/canastaIcono.png" alt="">
+                                      </div>
+                                      <div>
+                                              <img src="https://res.cloudinary.com/royal-oak-imagenes/image/upload/v1656443334/logo-simplificado_xcuvzo.png" alt="">
+                                      </div>
+                                      <div id="botonHamburguesa">
+                                              <button id="boton_hamburguesa" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                                                      <i class="bi bi-x-square"></i>
+                                              </button>
+                                      </div>
+                              </div>
+                      </nav>   
+              </div>
+
+          <div id="hamburguesitas">
+              <div>
+                  <a href="../index.html"><img src="../media/menuH.png"></a>
+                  <p>Menu</p>   
+              </div>
+              <div>
+                  <a href="./random.html"><img src="../media/royal_menuH.png"></a>
+                  <p>Royal</p>
+              </div>
+              <div v-if="cliente.length == 0">
+                  <a href="../login.html"><img src="../media/register_menuH.webp"></a>
+                  <p>Registrarme</p>
+              </div>
+              <div v-else>
+                  <a href="./perfil.html"><img src="../media/perfil_menuH.png"></a>
+                  <p>Perfil</p>
+              </div>
+              <div>
+                  <a href="#" @click="salir"><img src="../media/logout_menuH.png"></a>
+                  <p>Salir</p>
+              </div>
+          </div>
+      </div>
+      <nav id="menu_hamburguesa" class="navbar navbar-dark">
+          <div id="container_fluid" class="d-flex justify-between">
+          <div>
+              <img id="carritoHamburguesa" src="../media/canastaIcono.png" alt="">
+          </div>
+          <div>
+              <img src="https://res.cloudinary.com/royal-oak-imagenes/image/upload/v1656443334/logo-simplificado_xcuvzo.png" alt="logo">
+          </div>
+          <div id="botonHamburguesa">
+              <button id="boton_hamburguesa" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+          </div>
+          </div>
+      </nav>
+</div>
+
+
+      <!-- ======= Header ======= -->
+      <header>
+        <div class="nav">
+          <div id="marca">
+                  <a href="../index.html"><img src="https://res.cloudinary.com/royal-oak-imagenes/image/upload/v1656443334/logo-simplificado_xcuvzo.png" alt="Logo"></a>
+          </div>
+          <div id="menu">
+                  <a href="../index.html"><img class="scale-up-center" id="iconos"
+                                  src="../media/iconoBurger.png" alt="menu"></a>
+                  <p>Menu</p>
+          </div>
+          <div>
+                  <a href="./carrito.html"><img class="scale-up-center" src="../media/iconoBolsita.webp"
+                                  alt="pedido"></a>
+                  <p>Pedido</p>
+          </div>
+          <div>
+                  <a href="./random.html"><img class="scale-up-center" src="https://cdn-icons-png.flaticon.com/512/30/30569.png"
+                                  alt="royal"></a>
+                  <p>Royal</p>
+          </div>
+          <div v-if="cliente.length == 0">
+                  <a href="../login.html"><img class="scale-up-center " src="../media/Register.webp"
+                                  alt="registro"></a>
+                  <p>Registro</p>
+          </div>
+          <div v-else>
+              <a href="./perfil.html"><img src="../media/perfil.png" alt="perfil"></a>
+              <p>Perfil</p>
+          </div>
+          <div id="salir">
+                  <a href="#" @click="salir"><img class="scale-up-center" src="../media/cerrarSesion.png" alt="salir"></a>
+                  <p>Salir</p>
+          </div>
+  </div>   
+      </header>
+
+    <!-- ======= Main ======= -->
+    <main>
+
+
+
+      <div class="container-xl px-4 mt-5">
+        <div class="row justify-content-center">
+          <div class="col-xl-9 d-flex flex-column align-items-center">
+            <!-- Account details card-->
+            <div class="card col-12 mb-4 card-datos">
+              <div class="card-body text-center">
+                <!-- Profile picture image-->
+                <img class="img-account-profile rounded-circle mb-1" src="../media/hambur1.png" alt="">
+                <!-- Profile picture help block-->
+                <h2 id="saludo">Hola {{nombreCliente}}!</h2>
+
+              </div>
+              <div class="card-header">
+                <h3>Bienvenido a tu Perfil de Usuario</h3>
+                <p id="texto-perfil">Desde aqui podras modificar tus datos</p>
+              </div>
+
+              <div class="card-body">
+                <form>
+                  <!-- Form Row-->
+                  <div class="row gx-3 mb-3">
+                    <!-- Form Group (first name)-->
+                    <div class="col-md-6">
+                      <label class="small mb-2 d-flex justify-content-start" for="inputFirstName">Nombre</label>
+                      <input class="form-control" id="inputFirstName" type="text" v-model="nombreCliente">
+                    </div>
+                    <!-- Form Group (last name)-->
+                    <div class="col-md-6">
+                      <label class="small mb-2 d-flex justify-content-start" for="inputLastName">Apellido</label>
+                      <input class="form-control" id="inputLastName" type="text" v-model="apellidoCliente">
+                    </div>
+                  </div>
+                  <div class="row gx-3 mb-3">
+                    <!-- Form Group (email address)-->
+                    <div class="col-md-6 mb-3">
+                      <label class="small mb-2 d-flex justify-content-start" for="inputEmailAddress">Email</label>
+                      <input class="form-control" id="inputEmailAddress" type="text" placeholder=""
+                        v-model="mailCliente">
+                    </div>
+                    <!-- Form Group (phone number)-->
+                    <div class="col-md-6">
+                      <label class="small mb-2 d-flex justify-content-start" for="inputPhone">Telefono</label>
+                      <input class="form-control" id="inputPhone" type="text" placeholder="" v-model="telefonoCliente">
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <label class="small mb-2 d-flex justify-content-start" for="inputAddress">Direcciones</label>
+                    <div v-for="direccion in direccionCliente" class="col-md-6 d-flex justify-content-center">
+                      <input name="inputAddress" class="form-control inputAddress" type="text" placeholder=""
+                        v-model="direccion">
+                      <button v-on:click.prevent="eliminarDireccion(direccion)" class="trash p-2"><i class="bi bi-trash"
+                          style="font-size: 2rem; color: whitesmoke;"></i></button>
+
+                    </div>
+                    <div class="col-12 mt-3">
+                      <label for="inputAddress1" class="mb-2 d-flex justify-content-start">Agregar Nueva
+                        Direccion</label>
+                      <input class="form-control" id="inputAddress1" type="text" placeholder=""
+                        v-model="direccionNueva">
+                    </div>
+                  </div>
+                  <!-- Form Row-->
+                  <div class="row gx-3 mb-3 d-flex justify-content-center">
+                    <!-- Form Group (password)-->
+                    <div class="col-md-4">
+                      <label class="small mb-2 d-flex justify-content-start" for="inputPassword">Contraseña</label>
+                      <input class="form-control" id="inputPassword" type="password" name="password"
+                        v-model="contrasenaCliente">
+                    </div>
+                  </div>
+                  <!-- Save changes button-->
+                  <div class="row gx-3 mb-3 d-flex justify-content-center">
+                    <button class="btn btn-primary boton-enviar" type="button"
+                      v-on:click.prevent="editarCliente">Guardar
+                      Cambios</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row d-flex justify-content-center align-items-center divLogo">
+          <img src="../media/logo-royaloak-2.png" alt="RoyalOak - Logo" id="logo-intermedio">
+        </div>
+
+        <div class="row d-flex justify-content-center align-items-center">
+          <button class="col-4 boton-desplegable mb-3" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            Contacto<i class="bi bi-arrow-down-circle"></i>
+          </button>
+        </div>
+    </main>
+    <!-- ======= Footer ======= -->
+
+
+    <footer class="containter text-bg-dark collapse" id="collapseExample">
+
+      <div class="row justify-content-center">
+        <div class="col-9 align-self-center" id="contact-zone">
+          <h1 class=" d-flex justify-content-center mt-2" id="contact-title">CONTACTO</h1>
+          <p class=" d-flex justify-content-center text-center contact-text">En Royal Oak nos
+            preocupamos por ofrecerte una excelente propuesta.</p>
+          <p class="d-flex justify-content-center text-center contact-text">Productos elaborados
+            con materias primas de la mas alta calidad. Contamos con la mas moderna
+            tecnologia para la elaboracion de nuestros productos. Exquisitos sabores que
+            haran de tus cenas y almuerzos momentos unicos.</p>
+        </div>
+      </div>
+      <div class="row mt-1">
+        <div class="col-sm-12 col-md-6 col-lg-3 d-flex flex-column align-items-center justify-content-center">
+          <i class="bi bi-map large-icons" style="font-size: 3rem;"></i>
+          <h5 class="contact-subtitles">DIRECCION</h5>
+          <a
+            href="https://www.google.com/maps/place/Royal+Oak+Farmers+Market/@42.489493,-83.141097,15z/data=!4m5!3m4!1s0x0:0x56e7427bdbdafa3f!8m2!3d42.489493!4d-83.1410968?hl=es-419">
+            <p class="info">Calle Siempre Viva 123</p>
+          </a>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 d-flex flex-column align-items-center justify-content-center">
+          <i class="bi bi-phone large-icons" style="font-size: 3rem;"></i>
+          <h5 class="contact-subtitles">WHATSAPP</h5>
+          <p class="info">+54 11 123-4567</p>
+
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 d-flex flex-column align-items-center justify-content-center">
+          <i class="bi bi-envelope-open-heart large-icons" style="font-size: 3rem;"></i>
+          <h5 class="contact-subtitles">EMAIL</h5>
+          <p class="info">royaloak@thebest.com</p>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3 d-flex flex-column align-items-center justify-content-center">
+          <i class="bi bi-headset large-icons" style="font-size: 3rem;"></i>
+          <h5 class="contact-subtitles">LINEAS ROTATIVAS</h5>
+          <p class="info">+54 11 987-6543</p>
+        </div>
+      </div>
+      <div class="row d-flex flex-wrap justify-content-between baby-icons-row mt-2">
+        <div class="col d-flex justify-content-center align-items-center baby-icons">
+          <a href="#"><i class="bi bi-twitter" style="font-size: 1.25rem;"></i></a>
+        </div>
+        <div class="col d-flex justify-content-center align-items-center baby-icons2">
+          <a href="#"><i class="bi bi-linkedin" style="font-size: 1.25rem;"></i></a>
+        </div>
+        <div class="col d-flex justify-content-center align-items-center baby-icons">
+          <a href="#"><i class="bi bi-facebook" style="font-size: 1.25rem;"></i></a>
+        </div>
+        <div class="col d-flex justify-content-center align-items-center baby-icons2">
+          <a href="#"><i class="bi bi-instagram" style="font-size: 1.25rem;"></i></a>
+        </div>
+        <div class="col d-flex justify-content-center align-items-center baby-icons">
+          <a href="#"><i class="bi bi-link" style="font-size: 1.25rem;"></i></a>
+        </div>
+      </div>
+
+    </footer>
+  </div>
+
+  <!-- Script de Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+  <!-- Script de Axios - Vue.js - Javascript - SweetAlert -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/vue@3"></script>
+  <script src="../js/perfil.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Potta+One&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/pagos.css">
+    <title>Pago | Royal Oak</title>
+</head>
+
+<body>
+    <div id="app">
+
+        <div id="hamburguesa">
+
+            <div class="collapse" id="navbarToggleExternalContent">
+
+                <div>
+                    <nav class="menu_hamburguesa navbar navbar-dark">
+                        <div id="container_fluid" class="d-flex justify-between">
+                            <div>
+                                <img id="carritoHamburguesa" src="../media/canastaIcono.png" alt="">
+                            </div>
+                            <div>
+                                <img src="https://res.cloudinary.com/royal-oak-imagenes/image/upload/v1656443334/logo-simplificado_xcuvzo.png" alt="">
+                            </div>
+                            <div id="botonHamburguesa">
+                                <button id="boton_hamburguesa" class="navbar-toggler" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent"
+                                    aria-controls="navbarToggleExternalContent" aria-expanded="false"
+                                    aria-label="Toggle navigation">
+                                    <i class="bi bi-x-square"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+
+                <div id="hamburguesitas">
+                    <div>
+                        <a href="../index.html"><img src="../media/iconoBurger.png"></a>
+                        <p>Menu</p>
+                    </div>
+                    <div>
+                        <a href="./random.html"><img src="https://cdn-icons-png.flaticon.com/512/30/30569.png"></a>
+                        <p>Royal</p>
+                    </div>
+                    <div>
+                        <a href="../login.html"><img src="../media/Register.webp"></a>
+                        <p>Registrarme</p>
+                    </div>
+                    <div>
+                        <a @click="salir"><img src="../media/cerrarSesion.png"></a>
+                        <p>Salir</p>
+                    </div>
+                </div>
+            </div>
+            <nav class="menu_hamburguesa navbar navbar-dark">
+                <div id="container_fluid" class="d-flex justify-between">
+                    <div>
+                        <img id="carritoHamburguesa" src="../media/canastaIcono.png" alt="">
+                    </div>
+                    <div>
+                        <img src="https://res.cloudinary.com/royal-oak-imagenes/image/upload/v1656443334/logo-simplificado_xcuvzo.png" alt="Logo">
+                    </div>
+                    <div id="botonHamburguesa">
+                        <button id="boton_hamburguesa" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <header>
+            <div class="nav">
+                <div id="marca">
+                    <a href="#"><img src="https://res.cloudinary.com/royal-oak-imagenes/image/upload/v1656443334/logo-simplificado_xcuvzo.png"  alt="Logo"></a>
+                </div>
+                <div id="menu">
+                    <a href=#divisorBurgers><img class="scale-up-center" id="iconos" src="../media/iconoBurger.png"
+                            alt="menu"></a>
+                    <p>Menu</p>
+                </div>
+                <div>
+                    <a href="./carrito.html"><img class="scale-up-center" src="../media/iconoBolsita.webp"
+                            alt=""></a>
+                    <p>Pedido</p>
+                </div>
+                <div>
+                    <a href="./random.html"><img class="scale-up-center" src="https://cdn-icons-png.flaticon.com/512/30/30569.png"
+                            alt=""></a>
+                    <p>Royal</p>
+                </div>
+                <div>
+                    <a href="./perfil.html"><img class="scale-up-center " src="../media/perfil.png" alt=""></a>
+                    <p>Perfil</p>
+                </div>
+                <div id="salir">
+                    <a @click="salir"><img class="scale-up-center" src="../media/cerrarSesion.png" alt=""></a>
+                    <p>Salir</p>
+                </div>
+            </div>
+        </header>
+        <main>
+            <!-- Divisor Hamburguesa -->
+            <div data-aos="fade-up" class="divisor d-flex">
+                <div class="tipoDeComida">
+                    <img src="https://res.cloudinary.com/royal-oak-imagenes/image/upload/v1656443334/logo-simplificado_xcuvzo.png"
+                        alt="">
+                    <h3>Pago</h3>
+                </div>
+                <div id="divisorBurgers">
+
+                </div>
+            </div>
+            <!-- Pasarla de Pago -->
+            <div class="pasarela">
+                <div class="side">
+                    <div class="skew">
+                        <h3>Royal Oak - Delivery Bar</h3>
+                        <div class="btnPrecio">Precio total: $<span id="precioTotal">{{totalFactura}}</span> </div>
+                        <img
+                            src="https://res.cloudinary.com/royal-oak-imagenes/image/upload/v1656443334/logo-simplificado_xcuvzo.png" />
+                    </div>
+                </div>
+                <div class="header">
+                    <h1>Detalles de Pago</h1>
+                </div>
+                <div class="formPasarela">
+                    <form class="formForm">
+                        <fieldset class="number">
+                            <label for="number">Número de Tarjeta</label>
+                            <input id="number" type="num" maxlength="4" v-model="numUno" />
+                            <input type="num" maxlength="4" v-model="numDos" />
+                            <input type="num" maxlength="4" v-model="numTres" />
+                            <input type="num" maxlength="4" v-model="numCuatro" />
+                        </fieldset>
+                        <fieldset class="name">
+                            <label for="name">Nombre Titular Tarjeta</label>
+                            <input id="name" type="text" v-model="nombreTitular" />
+                        </fieldset>
+                        <fieldset class="exp">
+                            <label for="exp">Expiración</label>
+                            <input id="mes" type="number" max="12" min="1" v-model="fechaMes" />
+                            <input id="año" type="number" max="2030" min="2020" v-model="fechaAño" />
+                        </fieldset>
+                        <fieldset class="ccv">
+                            <label for="ccv">CCV</label>
+                            <input id="ccv" type="num" maxlength="3" v-model="cvv" />
+                        </fieldset>
+                        <button class="btnPasarela" type="submit" @click.prevent="confirmacionPagoFunc">Confirmar
+                            pago</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+    </div>
+</body>
+
+<!-- Script de Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+
+<!-- Script de Axios - Vue.js - Javascript - SweetAlert -->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://unpkg.com/vue@3"></script>
+<script src="../js/pagos.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- <script>AOS.init({ duration: 1200, })</script> -->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="./js/sweetAlert.js"></script>
+<script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+
+</html>

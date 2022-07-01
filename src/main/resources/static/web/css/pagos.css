@@ -1,0 +1,460 @@
+*,
+:before,
+:after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    /* Paleta de Colores */
+    --bordo: #501F3A;
+    --rosa: #CB2D6F;
+    --blanco: #CCCCCC;
+    --verdeClaro: #12A098;
+    --verdeOscuro: #0F292F;
+
+    /* Fuente Titulos y Contenido */
+    --fuenteTitulo: 'Potta One', cursive;
+    --fuenteContenido: 'Kdam Thmor Pro', sans-serif;
+
+}
+
+/* Body */
+body {
+    background-color: var(--verdeOscuro);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='600' y1='25' x2='600' y2='777'%3E%3Cstop offset='0' stop-color='%230F292F'/%3E%3Cstop offset='1' stop-color='%23501F3A'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='650' y1='25' x2='650' y2='777'%3E%3Cstop offset='0' stop-color='%230d2a34'/%3E%3Cstop offset='1' stop-color='%235a2140'/%3E%3C/linearGradient%3E%3ClinearGradient id='c' gradientUnits='userSpaceOnUse' x1='700' y1='25' x2='700' y2='777'%3E%3Cstop offset='0' stop-color='%230c2b38'/%3E%3Cstop offset='1' stop-color='%23652345'/%3E%3C/linearGradient%3E%3ClinearGradient id='d' gradientUnits='userSpaceOnUse' x1='750' y1='25' x2='750' y2='777'%3E%3Cstop offset='0' stop-color='%230f2b3d'/%3E%3Cstop offset='1' stop-color='%236f254b'/%3E%3C/linearGradient%3E%3ClinearGradient id='e' gradientUnits='userSpaceOnUse' x1='800' y1='25' x2='800' y2='777'%3E%3Cstop offset='0' stop-color='%23142b41'/%3E%3Cstop offset='1' stop-color='%237a2650'/%3E%3C/linearGradient%3E%3ClinearGradient id='f' gradientUnits='userSpaceOnUse' x1='850' y1='25' x2='850' y2='777'%3E%3Cstop offset='0' stop-color='%231c2a44'/%3E%3Cstop offset='1' stop-color='%23852855'/%3E%3C/linearGradient%3E%3ClinearGradient id='g' gradientUnits='userSpaceOnUse' x1='900' y1='25' x2='900' y2='777'%3E%3Cstop offset='0' stop-color='%23252946'/%3E%3Cstop offset='1' stop-color='%2390295a'/%3E%3C/linearGradient%3E%3ClinearGradient id='h' gradientUnits='userSpaceOnUse' x1='950' y1='25' x2='950' y2='777'%3E%3Cstop offset='0' stop-color='%232e2846'/%3E%3Cstop offset='1' stop-color='%239c2a5e'/%3E%3C/linearGradient%3E%3ClinearGradient id='i' gradientUnits='userSpaceOnUse' x1='1000' y1='25' x2='1000' y2='777'%3E%3Cstop offset='0' stop-color='%23372646'/%3E%3Cstop offset='1' stop-color='%23a72b63'/%3E%3C/linearGradient%3E%3ClinearGradient id='j' gradientUnits='userSpaceOnUse' x1='1050' y1='25' x2='1050' y2='777'%3E%3Cstop offset='0' stop-color='%23402443'/%3E%3Cstop offset='1' stop-color='%23b32c67'/%3E%3C/linearGradient%3E%3ClinearGradient id='k' gradientUnits='userSpaceOnUse' x1='1100' y1='25' x2='1100' y2='777'%3E%3Cstop offset='0' stop-color='%2349213f'/%3E%3Cstop offset='1' stop-color='%23bf2c6b'/%3E%3C/linearGradient%3E%3ClinearGradient id='l' gradientUnits='userSpaceOnUse' x1='1150' y1='25' x2='1150' y2='777'%3E%3Cstop offset='0' stop-color='%23501F3A'/%3E%3Cstop offset='1' stop-color='%23CB2D6F'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill-opacity='0.12'%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' x='100' width='1100' height='800'/%3E%3Crect fill='url(%23c)' x='200' width='1000' height='800'/%3E%3Crect fill='url(%23d)' x='300' width='900' height='800'/%3E%3Crect fill='url(%23e)' x='400' width='800' height='800'/%3E%3Crect fill='url(%23f)' x='500' width='700' height='800'/%3E%3Crect fill='url(%23g)' x='600' width='600' height='800'/%3E%3Crect fill='url(%23h)' x='700' width='500' height='800'/%3E%3Crect fill='url(%23i)' x='800' width='400' height='800'/%3E%3Crect fill='url(%23j)' x='900' width='300' height='800'/%3E%3Crect fill='url(%23k)' x='1000' width='200' height='800'/%3E%3Crect fill='url(%23l)' x='1100' width='100' height='800'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    overflow-x: hidden;
+}
+
+main{
+    margin-left: 8%;
+    width: 92vw;
+}
+
+/* NavBar Hamburguesa */
+@media(min-width: 670px){
+    #hamburguesa{
+        display: none;
+    }
+
+    #categorias{
+        display: none;
+    }
+}
+@media(max-width: 755px){
+
+    .nav{
+            display: none;
+        }
+        #hamburguesa{
+            display: contents;
+            color: #0F292F;
+        }
+        #navbarToggleExternalContent{
+            color: #0F292F;
+            background-color: #0F292F;
+            text-align: right;
+            height: 100vh;
+        }
+        #menu_hamburguesa{
+            display: contents;
+        }
+        #container_fluid{
+        width: 100%;
+        height: 10vh;
+        background-color: var(var(--blanco));
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 3%;
+        position: fixed;
+        z-index: 10;
+        }
+    
+        #container_fluid img{
+            height: 9vh;
+        }
+    
+        #carritoHamburguesa{
+            margin-left: 15%;
+        }
+    
+        #container_fluid #carritoHamburguesa {
+            height: 5vh;
+        }
+    
+        #boton_hamburguesa{
+        /* background-color: #0F292F; */
+        padding: 3px;
+        color: var(--verdeOscuro);
+        font-size: xx-large;
+        }
+    
+        #hamburguesitas{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        #hamburguesitas div{
+            height: 12vh;
+            align-items: center;
+            margin-top: 15%;
+        }
+    
+        #hamburguesitas img{
+            height: 80%;
+            width: auto;
+        }
+    
+        .navbar-toggler-icon{
+        background-color: #0F292F;
+        }
+    
+        #pizzas{
+            display: none;
+        }
+    
+        #pizza{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+    
+        #pizza img{
+            width:4rem;
+            margin: 3%;
+        }
+    
+        #contenedorCategorias{
+            display: flex;
+            justify-content: center;
+        }
+    
+        #categorias{
+            display: flex;
+            justify-content: center;
+            background-color: var(--blanco);
+            width: fit-content;
+            border-radius: 15px;
+            margin: 3% 0%;
+        }
+}   
+    
+
+/* Divisor hamburguesa */
+.divisor{
+    width: 88%;
+    height: 10%;
+    margin-left: 10%;
+    padding-top: 1rem;
+    border-radius: 10px;
+    padding-bottom: 1%;
+}
+
+.tipoDeComida{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: var(--blanco);
+    font-family:cursive;
+    /* border-right: 1px solid #CCCCCC; */
+    padding-right: 1%;
+    
+}
+
+.tipoDeComida img{
+    width: auto;
+    height: 12vh;
+    margin-left: 1rem;
+}
+
+.tipoDeComida h3{
+    width: min-content;
+    height: min-content;
+    margin-bottom: 0;
+    font-weight: 100;
+    color: var(--blanco);
+    background-color: var(--verdeClaro);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family:fantasy ;
+}
+
+#divisorBurgers{
+    width: 100%;
+    height: 15vh;
+    background-image: url(https://us.123rf.com/450wm/kbolbik/kbolbik2010/kbolbik201000595/157596716-patr%C3%B3n-transparente-de-vector-de-hamburguesas-de-contorno-negro-fondo-para-banner-embalaje-men%C3%BA-.jpg?ver=6);
+    background-size: auto;
+}
+/* Pasarela de Pago */
+.pasarela {
+    height: 400px;
+    width: 650px;
+    margin: auto;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    position: relative;
+    top: 4rem;
+    bottom: 0;
+    right: 0;
+    font-size: 1.1em;
+}
+
+.side {
+    background: var(--bordo);
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.side .skew {
+    background: var(--blanco);
+    height: 110%;
+    width: 45%;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: -5%;
+    z-index: 5;
+    transform: skew(8deg);
+    border-radius: 30px;
+}
+
+.side .skew * {
+    transform: skew(-8deg);
+}
+
+.side .skew h3 {
+    color: var(--verdeOscuro);
+    font-size: 2rem;
+    text-align: center;
+    font-family: var(--fuenteTitulo);
+}
+
+.side .skew img {
+    width: 150px;
+    margin: 25px 0;
+    left: 3.6rem;
+    position: relative;
+}
+
+.side .skew .btnPrecio {
+    background: var(--verdeClaro);
+    width: 180px;
+    margin: 10px auto;
+    padding: 10px 18px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+    cursor: default;
+}
+
+.header {
+    width: 60%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.header h1 {
+    background: linear-gradient(-45deg, var(--bordo), var(--rosa));
+    padding: 5px 25px;
+    font-family: var(--fuenteTitulo);
+    font-size: 2rem;
+    color: var(--blanco);
+}
+
+.formPasarela {
+    width: 325px;
+    height: 100%;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+}
+
+input,
+fieldset,
+.btnPasarela {
+    border: none;
+    outline: none;
+    font-family: var(--fuenteContenido);
+}
+input{
+    height: 2.4rem;
+}
+
+fieldset {
+    display: block;
+}
+
+label {
+    display: block;
+    color: var(--blanco);
+    font: 500 13px Roboto;
+}
+
+input {
+    background: rgba(255, 255, 255, 0.18);
+    padding: 8px 12px;
+    margin: 5px 5px 5px 0;
+    border-radius: 3px;
+    color:var(--verdeOscuro);
+}
+
+input:nth-last-of-type(1) {
+    margin-right: 0;
+}
+
+option {
+    background: #474747;
+}
+
+.number input {
+    width: calc(25% - 4px);
+}
+
+.name input {
+    width: 100%;
+}
+
+.exp,
+.ccv {
+    display: inline-block;
+}
+
+.exp {
+    width: 60%;
+}
+.exp input{
+    width: 5rem;
+}
+
+.ccv {
+    width: 40%;
+}
+
+.ccv input {
+    width: 100%;
+}
+
+.btnPasarela {
+    display: block;
+    background: linear-gradient(-45deg, var(--verdeClaro), var(--verdeOscuro));
+    width: 200px;
+    color: white;
+    padding: 10px 18px;
+    margin: 40px auto;
+    font-size: 18px;
+    border-radius: 22px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.6s ease-in-out;
+}
+
+.btnPasarela:hover{
+    background: linear-gradient(-45deg, var(--verdeOscuro),var(--verdeClaro));
+    font-size: 1.3rem;
+    transition: all 0.6s ease-in-out;
+}
+
+@media screen and (max-width:990px) {
+    .pasarela{
+        width: 603px;
+        height: 370px;
+    }
+    .side .skew{
+        width: 43%;
+        left: 8px;
+        right: -9px;
+    }
+    .side .skew img {
+        left: 3rem;
+        width: 8rem;
+    }
+
+    .formPasarela{
+        left: 19rem;
+    }
+    .formPasarela .number label{
+        width: 10rem;
+    }
+    .formPasarela .number input{
+        width: 4.2rem;
+    }
+    .formPasarela .name label{
+        width: 10rem;
+    }
+    .formPasarela .name input{
+        width: 17.9rem;
+    }
+    .formPasarela .exp{
+        width: 9.9rem;
+    }
+    .formPasarela .exp input{
+        width: 3.5rem;
+    }
+}
+@media screen and (max-width:755px) {
+    .tipoDeComida{
+        width: 10rem;
+    }
+    .divisor {
+        width: 90%;
+        height: 10%;
+        margin-left: 0%;
+        margin-top: 3rem;
+    }
+    .pasarela{
+        width: 90%;
+        height: 350px;
+        margin: 0;
+    }
+    .side .skew{
+        display: none;
+    }
+    .header{
+        width: 100%;
+    }
+    .formPasarela{
+        left: 3rem;
+        width: 100%;
+    }
+    .formPasarela .number label{
+        width: 10rem;
+    }
+    .formPasarela .number input{
+        width: 5rem;
+    }
+    .formPasarela .name label{
+        width: 15rem;
+    }
+    .formPasarela .name input{
+        width: 21rem;
+    }
+    .formPasarela .exp{
+        width: 9.9rem;
+    }
+    .formPasarela .exp input{
+        width: 3.5rem;
+    }
+    .formPasarela button{
+        margin: 22px;
+    }
+    .ccv input {
+        width: 88%;
+    }
+    .btnPasarela{
+        width: 10rem;
+        margin: 1rem 0 2rem 7rem !important;
+    }
+}

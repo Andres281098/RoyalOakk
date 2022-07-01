@@ -1,0 +1,409 @@
+
+
+/* * { box-sizing: border-box; } */
+
+html, body{
+	margin: 0;
+    padding: 0;
+}
+
+body{
+	background: black;
+	font-family: initial;
+    font-weight: 100;
+}
+
+.container{
+
+}
+
+header{
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+}
+
+header div{
+    width: 100px;
+    height: 40px;
+    overflow: visible;
+}
+
+.shadow{
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.3), 0 0 0 0 rgba(0, 0, 0, 0.3);
+}
+
+#flecha{
+    width: 3rem;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+
+#flecha:hover{
+    transform: rotate(360deg);
+    transition-duration: 1s;
+}
+
+#padre{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo img{
+	width: 4rem;
+	
+}
+
+#cart{
+    width: 150px;
+    min-width: 100px;
+    background: #E22E8C;
+    border-radius: 10px;
+    text-transform: uppercase;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+	display: grid;
+	grid-template-rows: [a] 93px [b] 109px [c] auto [d];
+
+	grid-template-columns: [a] 45px [b] minmax(300px,950px) [c] 50px [d] 350px [e];
+}
+
+.content h1{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 32px;
+    text-align: center;
+    margin: 0;
+    
+    grid-row: b;
+    grid-column: d;
+}
+
+label{
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #000000 ;
+    
+}
+
+input{
+    color: #CA136B;
+    border: 1px solid rgb(226, 225, 232);
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px 0 5px 12px;
+    width: 100px;
+    height: 25px;
+}
+
+#checkoutNav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 400px;
+    background: #073b39 ;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+    grid-row: c;
+    z-index: 2;
+}
+
+#checkoutNav ul{
+    color: #D5D2DD;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    
+    grid-row: b / -1;
+}
+
+#checkoutNav ul i.fa {
+    font-size: 25px;
+}
+
+.active{
+    color: #FBFBFB;
+}
+
+#product{
+	max-width: 1000px;
+	max-height: 752px;
+	border-radius: 10px;
+	overflow: hidden;
+	
+	grid-row: a / -1;
+	grid-column: b / d;
+}
+
+#product img{
+	object-fit: contain;
+	display: block;
+	max-width: 100%;
+	height: 100%;
+}
+
+#checkoutCard{
+    max-width: 400px;
+    background: #FBFBFB;
+    border-radius: 10px;
+    grid-row: c;
+    grid-column: c / e;
+    align-self: start;
+}
+
+#details{
+    padding: 10px;
+    background: linear-gradient(#FBFBFB 40%, #D5D2DD 100%);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#details dl {
+	margin:0;
+	display: grid;
+	grid-template-columns: repeat( 3, 1fr );
+	grid-template-rows: 60px auto;
+	justify-items: center;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+#details dt {
+	color: #000000 ;
+    font-weight: 100;
+	font-size: 18px;
+	grid-row: 1;
+}
+
+#details dd {
+    color: #000000 ;
+    margin:0;
+}
+
+#checkoutCard ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    font-size: 18px;
+}
+
+#checkoutCard ul li input{
+    width: 30px;
+    height: 30px;
+    margin-left: 70px;
+    color: #12A098 ;
+}
+
+#thumbnail{
+    width: 80px;
+    height: auto;
+}
+
+#stock{
+    width: 80px;
+}
+
+form {
+padding-top: 1em;
+}
+
+form > * {
+padding: 0 0.8em;
+margin-bottom: .5em;
+}
+
+form > :last-child {
+margin:0;
+}
+
+#checkoutCard form #cards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+#checkoutCard form #cards ul{
+    margin: 0;
+    padding: 0;
+    width: 40%;
+}
+#cards i.fa {
+    font-size: 40px;
+    color: #D5D2DD;
+}
+#cards i.fa.fa-cc-visa {
+    color: #CA136B;
+}
+#cards label{
+}
+
+#cardNumber{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-center;
+}
+
+#cardNumber label{
+grid-column: 1 / -1;
+}
+
+#cardNumber input{
+    padding: 0%;
+	width: auto;
+	height: auto;
+	min-width: 48px;
+	min-height: 35px;
+}
+
+#securityInfo {
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-gap: 10px;
+}
+
+#securityInfo input {
+	padding: 0;
+	width: auto;
+	height: auto;
+	min-width: 60px;
+	min-height: 35px;
+}
+
+
+#btnSubmit{
+    text-align: center;
+    width: 100%;
+    border: none;
+    height: 50px;
+    text-transform: uppercase;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: #084946 ;
+    color: #FBFBFB;
+    font-size: 20px;
+    margin-bottom: 0;
+    transition: 0.5s;
+}
+
+#btnSubmit:hover{
+    background-color: #12A098;
+    transition-duration: 0.5s;
+}
+
+/* MODAL */
+.modal-header{
+    background-color: #12A098 ;
+}
+
+.modal-title{
+margin-left: 40%;
+}
+
+.modal-body {
+    background-color: white;
+}
+
+.modal-content{
+    background-color: white;
+}
+
+.modal-footer button{
+    border: 1px black solid;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px black;
+}
+
+.modal-footer button:hover{
+    background-color: #12A098 ;
+}
+
+footer{
+    text-align: center;
+    padding: 10px;
+    color: #FBFBFB;
+}
+
+footer a{
+    color: #FBFBFB;
+    padding: 0 20px;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: #12A098 ;
+}
+
+@media screen and ( max-width: 746px )
+{
+	.content {
+		display: block;
+	}
+	
+	.content h1 {
+		margin: 1em;
+	}
+	
+	#checkoutNav {
+		width: auto;
+		height: auto;
+		margin: 0 0 1em 0;
+		border-radius: 0;
+		display: block;
+	}
+	
+	#checkoutNav ul {
+		display: flex;
+		justify-content: space-around;
+		min-width: 50%;
+		margin:0;
+	}
+	
+	#checkoutCard {
+		margin: auto;
+	}
+	
+	footer {
+		display: flex;
+		flex-direction: column;
+	}
+
+    option{
+        color: #12A098 ;
+    }
+
+    h6{
+        color: #12A098 ;
+    }
+
+
+    #padre{
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    #flecha{
+        margin-top:0.5rem;
+    }
+    
+
+   
+
+
+}

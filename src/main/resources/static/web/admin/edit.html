@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/2630d2cbb2.js" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+                crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="./edit.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="icon" href="assets/logo-royaloak-2 (1).ico">
+        <title>Edit product | Royal Oak</title>
+</head>
+
+<body>
+        <div id="app">
+            <section class="container">
+                <!-- <header>
+                    
+                    
+                </header> -->
+                <div id="padre">
+                    <div>
+                        <a href="admin.html"><img id="flecha" src="https://res.cloudinary.com/royal-oak-imagenes/image/upload/v1656443334/logo-simplificado_xcuvzo.png" alt="Logo"></a>
+                        <h5 class="link-light">Volver</h5>
+                    </div>
+                </div>
+                <section class="content">
+                    <article id="checkoutNav" class="shadow">
+                        <ul>
+                            <li class="active">
+                                <p>N°1</p>
+                                <i class="fa fa-truck" aria-hidden="true"></i>
+                                <p>Entrar</p>
+                            </li>
+                            <li class="active">
+                                <p>N°2</p>
+                                <i class="fa fa-credit-card" aria-hidden="true"></i>
+                                <p>Crear</p>
+                            </li>
+                            <li class="active">
+                                <p>N°3</p>
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                <p>comer</p>
+                            </li>
+                        </ul>
+                    </article>
+                    <article v-if='subTipo=="HAMBURGUESAS"' id="product" class="shadow"><img src="https://fondosmil.com/fondo/75567.jpg" alt="casa"></article>
+                    <article v-else-if='subTipo== "PIZZAS"' id="product" class="shadow"><img src="https://fondosmil.com/fondo/65797.jpg" alt="auto"></article>
+                    <article v-else-if='subTipo == "PICADAS"' id="product" class="shadow"><img src="https://i.pinimg.com/736x/2b/9e/8a/2b9e8af5b4ebd70cdde1228f92563de1.jpg" alt="auto"></article>
+                    <article v-else-if='subTipo == "ENSALADAS"' id="product" class="shadow"><img src="" alt="auto"></article>
+                    <article v-else-if='subTipo == "CON_ALCOHOL"' id="product" class="shadow"><img src="https://p4.wallpaperbetter.com/wallpaper/443/613/274/alcohol-cocktail-bottle-drinks-wallpaper-preview.jpg" alt="auto"></article>
+                    <article v-else-if='subTipo == "SIN_ALCOHOL"' id="product" class="shadow"><img src="" alt="auto"></article>
+                    <article v-else="" id="product" class="shadow"><img src="https://neilpatel.com/wp-content/uploads/2017/08/How-To-Generate-Buzz-When-You-Launch-a-New-Product.jpg" alt="auto"></article>
+                    
+                    <h1 v-if='subTipo=="HAMBURGUESAS"'>Nueva hamburguesa</h1>
+                    <h1 v-else-if='subTipo== "PIZZAS"'>Nueva pizza </h1>
+                    <h1 v-else-if='subTipo== "PICADAS"'>Nueva picada</h1>
+                    <h1 v-else-if='subTipo== "ENSALADAS"'>Nueva ensaladita</h1>
+                    <h1 v-else-if='subTipo == "CON_ALCOHOL"' >Bebida con alcohol</h1>
+                    <h1 v-else-if='subTipo == "SIN_ALCOHOL"' >Bebida sin alcohol</h1>
+                    <article id="checkoutCard" class="shadow">
+                        <div id="details">
+                            <dl class="">
+                                <dt>Producto</dt>
+                                <dd v-if="subTipo == 'HAMBURGUESAS'"><img id="thumbnail" src="https://fondosmil.com/fondo/75567.jpg" alt="Lunar 2"></dd>
+                                <dd v-else-if="subTipo == 'PIZZAS'"><img id="thumbnail" src="https://img.freepik.com/foto-gratis/pizza-pepperoni-sobre-mesa_140725-5396.jpg?w=2000" alt="Lunar 2"></dd>
+                                <dd v-else-if="subTipo == 'PICADAS'"><img id="thumbnail" src="https://picadasboom.com.ar/wp-content/uploads/2020/11/25.jpg" alt="Lunar 2"></dd>
+                                <dd v-else-if="subTipo == 'ENSALADAS'"><img id="thumbnail" src="" alt="Lunar 2"></dd>
+                                <dd v-else-if="subTipo == 'CON_ALCOHOL'"><img id="thumbnail" src="https://images5.alphacoders.com/406/406996.jpg" alt="Lunar 2"></dd>
+                                <dd v-else-if="subTipo == 'SIN_ALCOHOL'"><img id="thumbnail" src="" alt="Lunar 2"></dd>
+                                <dd v-else="" ><img id="thumbnail" src="https://www.desab.com.ar/wp-content/uploads/2020/11/producto-nuevo-png-1-300x297.png" alt="Lunar 2"></dd>
+                                <dt>Tipo producto</dt>
+                                <select v-model="tipo" class="inputbox" name="subTipo" id="loantype" required>
+                                    <option value="">Elige un tipo de comida</option>
+                                    <option value="COMIDA">COMIDA</option>
+                                    <option value="BEBIDA">BEBIDA</option>
+                                    
+                                </select>
+                                <dt>Stock</dt>
+                                <input v-model="stock" id="stock" type="number" placeholder="0">
+                                
+                                </dl>
+                        </div>
+                        <form action="">
+                            <div id="cards">
+                                
+                                <ul>
+                                    <li><label for="" name="loanType">Precio</label></li>
+                                    <input v-model="precio"  class="link-dark" type="number" placeholder="$0">
+                                </ul>
+                            </div>
+                            <label for="">Subtipo</label>
+                            <div id="cardNumber">
+                                <select v-model="subTipo" class="inputbox" name="subTipo" id="loantype" required>
+                                    <option value="">Elige un tipo de comida</option>
+                                    <option value="HAMBURGUESAS">HAMBURGUESAS</option>
+                                    <option value="PIZZAS">PIZZAS</option>
+                                    <option value="PICADAS">PICADAS</option>
+                                    <option value="ENSALADAS">ENSALADAS</option>
+                                    <option value="SIN_ALCOHOL">BEBIDA SIN ALCOHOL</option>
+                                    <option value="CON_ALCOHOL">BEBIDAS CON ALCOHOL</option>
+                                </select>
+                            </div>
+                            <label for="">Nombre del producto</label>
+                            <div id="cardNumber">
+                                <input v-model="nombre"  type="text" name="select" id="12" placeholder="Agrega un nombre">
+                            </div>
+                            <label for="">descripcion del producto</label>
+                            <div id="cardNumber">
+                                <input v-model="descripcion"  type="text" name="select" id="12" placeholder="Agrega una descripcion">
+                            </div>
+                            <label for="">imagen</label>
+                            <div id="cardNumber">
+                                <input v-model="imagen" type="text" name="select" id="12" placeholder="Agrega URL del producto">
+                            </div>
+                            <label for="">Producto Activo</label>
+                            <div id="cardNumber">
+                                <label for="1">activo</label>
+                                <input v-model="activo" value="true" type="radio" name="true" id="1" placeholder="Agrega los ingredientes">
+                                <label for="2">inactivo</label>
+                                <input v-model="activo" value="false" type="radio" name="false" id="2" placeholder="Agrega los ingredientes">
+                            </div>
+    
+    
+                            <input type="button" class="button" value="Crear" id="btnSubmit" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+    
+                            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title link-dark " id="exampleModalLabel">¿Crear Producto?</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-center">
+                                            ¿Estas Seguro que quieres crear este producto?
+                                        </div>
+                                            <div class="modal-footer d-flex justify-content-center">
+                                                <button type="button" class="btn2" data-bs-dismiss="modal">Cancelar</button>
+                                                <button @click="crearProducto"  class="btn2" type="button">Si</button>
+                                            </div>
+                                    </div>
+                                </div> 
+                            </div>
+    
+                        </form>
+                    </article>
+                </section>
+                <footer><a href="#">team: Royal oak</a><a href="#" target="_blank">Designer: LosNoAutenticados</a><a href="#" target="_blank">Web developers Team: LosNoAutenticados s.a</a> </footer>
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+        <!-- Script de Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+                integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+                crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+                integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+                crossorigin="anonymous"></script>
+
+        <!-- Script de Axios - Vue.js - Javascript - SweetAlert -->
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="https://unpkg.com/vue@3"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>AOS.init({ duration: 1200, })</script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="./edit.js"></script>
+        <script src="./js/sweetAlert.js"></script>
+        <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+</body>
+
+</html>
