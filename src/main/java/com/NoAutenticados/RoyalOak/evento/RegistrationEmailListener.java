@@ -57,7 +57,7 @@ public class RegistrationEmailListener implements ApplicationListener <OnRegistr
                 +nombreEmisor;
 
         contenidoEmail = contenidoEmail.replace("Cliente", cliente.getNombreCompleto());
-        contenidoEmail = contenidoEmail.replace("URL","https://royaloak25.herokuapp.com/web/pages"+urlConfirmacionRegistro);
+        contenidoEmail = contenidoEmail.replace("URL","https://royaloakk.herokuapp.com/web/pages"+urlConfirmacionRegistro);
         MimeMessage mensaje = javaMailSender.createMimeMessage();
         MimeMessageHelper mensajeAyudador = new MimeMessageHelper(mensaje);
         mensajeAyudador.setFrom(emailEmisor, nombreEmisor);
