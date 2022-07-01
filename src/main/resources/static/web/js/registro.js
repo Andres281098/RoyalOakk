@@ -1,7 +1,6 @@
 Vue.createApp({
     data() {
         return {
-            // registrationUrlApi:"localhost:8080/api/registro/",
             cliente:[],
         }
     },
@@ -19,7 +18,7 @@ Vue.createApp({
                         console.log(this.cliente)
                         console.log(this.cliente.email)
                         console.log(this.cliente.contraseña)
-                        setTimeout(this.logInFunc, 1000)
+                        setTimeout(this.logInFunc(), 1000)
                         setTimeout(function(){window.location.href = "/web/index.html"}, 4000)
                     })
                     .catch(error => console.log(error))
