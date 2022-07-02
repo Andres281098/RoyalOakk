@@ -16,6 +16,7 @@ Vue.createApp({
                     .then(datos => {
                         this.cliente = datos.data
                         setTimeout(this.logInFunc, 1000)
+                        setTimeout(function(){window.location.href = "/web/index.html"}, 4000)
                     })
                     .catch(error => console.log(error))
             })
@@ -28,7 +29,6 @@ Vue.createApp({
                     {headers:{'content-type':'application/x-www-form-urlencoded'}})
                 .then(response => {
                     console.log("Youre sign in")
-                    window.location.href = '/web/index.html'
                     // if (this.email.includes("@mbb-admin.com")){
                     //     window.location.href = "/web/manager/manager.html"
                     // } else {
